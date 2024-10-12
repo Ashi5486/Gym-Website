@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Animation</title>
+        <style>
+            body{
+                padding: 0;
+                margin:0;
+                height: 100vh;
+                background-color: #000000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+            .container{
+                display: flex;
+                gap: 20px;
+            }
+            .box1,.box2{
+                width: 200px;
+                background-color: #000000;
+            }
+            h1{
+                color: orangered;
+                text-shadow: 0px 0px 5px rgb(133,133,133);
+                font-family: Sans-Serif;
+                font-size: 30px;
+                width:200px ;
+            }
+            .box1{
+                z-index: 3;
+                animation: move1 3s forwards ease-in-out infinite;
+                border-right: 4px solid orangered;
+            }
+            .box2{
+                animation: move2 3s forwards ease-in-out infinite;
+                border-left: 4px solid orangered;
+            }
+        @keyframes move1{
+            from{
+                margin-right: -120px;
+            }
+            to{
+                margin-right: 0px;
+            }
+        }
+         @keyframes move2{
+            from{
+                margin-left: -120px;
+            }
+            to{
+                margin-left: 0px;
+            }
+        }
+        </style>
+    </head>
+<body>
+    <div class="container">
+    <div class="box1"></div>
+<h1>Learning Axis</h1>
+<div class="box2"></div>
+</div>
+</body>
+</html>

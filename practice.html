@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eval Example</title>
+</head>
+<body>
+  <script>
+  function isPrime(num, divisor = 2) {
+  if (num <= 1) {
+    return false;
+  }
+  if (divisor * divisor > num) {
+    return true;
+  }
+  if (num % divisor === 0) {
+    return false;
+  }
+  return isPrime(num, divisor + 1);
+}
+
+console.log(isPrime(17)); // Output: true
+console.log(isPrime(20)); // Output: false
+  </script>
+</body>
+</html>
